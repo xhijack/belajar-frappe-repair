@@ -83,7 +83,7 @@ app_license = "mit"
 # ------------
 
 # before_install = "repair.install.before_install"
-# after_install = "repair.install.after_install"
+after_migrate = "repair.install.after_migrate"
 
 # Uninstallation
 # ------------
@@ -137,13 +137,11 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Sales Invoice": {
+		"validate": "repair.utils.validate_duplicate_si",
+	}
+}
 
 # Scheduled Tasks
 # ---------------

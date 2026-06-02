@@ -1,0 +1,137 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-06-02 09:50:35.451879",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1c8a",
+  "amended_from",
+  "customer",
+  "column_break_nwdd",
+  "posting_date",
+  "price_list",
+  "status",
+  "section_break_sxry",
+  "items",
+  "section_break_cbud",
+  "column_break_sqhc",
+  "column_break_jril",
+  "grand_total"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1c8a",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Order Repair",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_nwdd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "now",
+   "fieldname": "posting_date",
+   "fieldtype": "Datetime",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "section_break_sxry",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Order Repair Item"
+  },
+  {
+   "fieldname": "section_break_cbud",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_sqhc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jril",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total",
+   "read_only": 1
+  },
+  {
+   "default": "Standard Selling",
+   "fieldname": "price_list",
+   "fieldtype": "Link",
+   "label": "Price List",
+   "options": "Price List",
+   "reqd": 1
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nProgress\nCompleted",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Sales Invoice",
+   "link_fieldname": "order_repair"
+  }
+ ],
+ "modified": "2026-06-02 13:22:44.410022",
+ "modified_by": "Administrator",
+ "module": "Repair",
+ "name": "Order Repair",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
