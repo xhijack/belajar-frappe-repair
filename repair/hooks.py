@@ -43,7 +43,7 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Customer" : "public/js/customer.js","Sales Invoice" : "public/js/sales_invoice.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -140,28 +140,23 @@ after_migrate = "repair.install.after_migrate"
 doc_events = {
 	"Sales Invoice": {
 		"validate": "repair.utils.validate_duplicate_si",
-	}
+        "on_submit": "repair.utils.update_repair_order_payment_status"
+	},
+    "Payment Entry": {
+        "on_submit": "repair.utils.update_repair_order_payment_status_in_pe",
+        "on_update": "repair.utils.update_order_repair_in_pe"
+    }
 }
 
 # Scheduled Tasks
 # ---------------
 
 # scheduler_events = {
-# 	"all": [
-# 		"repair.tasks.all"
-# 	],
+	
 # 	"daily": [
 # 		"repair.tasks.daily"
 # 	],
-# 	"hourly": [
-# 		"repair.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"repair.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"repair.tasks.monthly"
-# 	],
+	
 # }
 
 # Testing

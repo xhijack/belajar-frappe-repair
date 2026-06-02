@@ -8,6 +8,7 @@
   "section_break_1c8a",
   "amended_from",
   "customer",
+  "payment_status",
   "column_break_nwdd",
   "posting_date",
   "price_list",
@@ -98,6 +99,12 @@
    "label": "Status",
    "options": "Pending\nProgress\nCompleted",
    "read_only": 1
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "\nInvoiced\nPaid"
   }
  ],
  "grid_page_length": 50,
@@ -109,7 +116,7 @@
    "link_fieldname": "order_repair"
   }
  ],
- "modified": "2026-06-02 13:22:44.410022",
+ "modified": "2026-06-02 14:06:11.936577",
  "modified_by": "Administrator",
  "module": "Repair",
  "name": "Order Repair",
